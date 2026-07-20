@@ -102,7 +102,8 @@
     <div class="loader__bg" aria-hidden="true"></div>
     <div class="loader__content">
       <div class="loader__logo" aria-hidden="true">
-        <img src="assets/actual_logo.png" alt="Muhammad Faizan Logo" style="width: 100%; height: 100%; object-fit: contain;" />
+        <img src="assets/actual_logo.png" alt="Muhammad Faizan Logo"
+          style="width: 100%; height: 100%; object-fit: contain;" />
       </div>
       <div class="loader__title">Muhammad Faizan</div>
 
@@ -233,8 +234,7 @@
               <div class="ill" id="ill">
                 <div class="ill__shadow"></div>
                 <div class="ill__portrait">
-                  <img src="assets/new%20picture.jpeg" alt="Muhammad Faizan"
-                    class="ill__portraitImg" />
+                  <img src="assets/new%20picture.jpeg" alt="Muhammad Faizan" class="ill__portraitImg" />
                 </div>
                 <div class="ill__phone floaty">
                   <div class="ill__screen">
@@ -341,7 +341,8 @@
                 <div>
                   <h3 class="cardTitle">Short Bio</h3>
                   <p class="cardText">
-                    I’m Muhammad Faizan—focused on web development, PWA experiences, and mobile app development. I design
+                    I’m Muhammad Faizan—focused on web development, PWA experiences, and mobile app development. I
+                    design
                     for clarity, build for speed, and ship with confidence.
                   </p>
                 </div>
@@ -404,7 +405,9 @@
                 <div class="bentoCard__content">
                   <div class="bentoIcon"><i class="fa-solid fa-code"></i></div>
                   <h3 class="bentoTitle">Web Development</h3>
-                  <p class="bentoDesc">Interactive frontends, clean architecture, and performance-first builds using modern frameworks and standards. I build responsive and interactive sites designed for high traffic and reliability.</p>
+                  <p class="bentoDesc">Interactive frontends, clean architecture, and performance-first builds using
+                    modern frameworks and standards. I build responsive and interactive sites designed for high traffic
+                    and reliability.</p>
                 </div>
               </div>
 
@@ -414,7 +417,8 @@
                 <div class="bentoCard__content">
                   <div class="bentoIcon"><i class="fa-solid fa-mobile-screen-button"></i></div>
                   <h3 class="bentoTitle">Progressive Web Apps (PWA)</h3>
-                  <p class="bentoDesc">Offline-ready experiences with fast loading, native install support, caching strategies, and reliable loading.</p>
+                  <p class="bentoDesc">Offline-ready experiences with fast loading, native install support, caching
+                    strategies, and reliable loading.</p>
                 </div>
               </div>
 
@@ -424,7 +428,8 @@
                 <div class="bentoCard__content">
                   <div class="bentoIcon"><i class="fa-solid fa-diamond"></i></div>
                   <h3 class="bentoTitle">Mobile Applications</h3>
-                  <p class="bentoDesc">Mobile-friendly responsive UI patterns, cross-platform layouts, and smooth gesture mechanics.</p>
+                  <p class="bentoDesc">Mobile-friendly responsive UI patterns, cross-platform layouts, and smooth
+                    gesture mechanics.</p>
                 </div>
               </div>
 
@@ -434,7 +439,8 @@
                 <div class="bentoCard__content">
                   <div class="bentoIcon"><i class="fa-solid fa-table-cells"></i></div>
                   <h3 class="bentoTitle">Dashboard & Admin Panels</h3>
-                  <p class="bentoDesc">Custom dashboard interfaces with real-time data flows, role-based access, comprehensive validations, clean databases, and scalable logic structures.</p>
+                  <p class="bentoDesc">Custom dashboard interfaces with real-time data flows, role-based access,
+                    comprehensive validations, clean databases, and scalable logic structures.</p>
                 </div>
               </div>
 
@@ -444,7 +450,8 @@
                 <div class="bentoCard__content">
                   <div class="bentoIcon"><i class="fa-solid fa-star"></i></div>
                   <h3 class="bentoTitle">UI/UX Design</h3>
-                  <p class="bentoDesc">Modern, clean user interfaces with clear spacing, premium typography, and refined detail aesthetics.</p>
+                  <p class="bentoDesc">Modern, clean user interfaces with clear spacing, premium typography, and refined
+                    detail aesthetics.</p>
                 </div>
               </div>
 
@@ -454,7 +461,8 @@
                 <div class="bentoCard__content">
                   <div class="bentoIcon"><i class="fa-solid fa-arrows-rotate"></i></div>
                   <h3 class="bentoTitle">REST API Integration</h3>
-                  <p class="bentoDesc">Robust server API consumption, secure key authentication handling, clean data mappings, and validation.</p>
+                  <p class="bentoDesc">Robust server API consumption, secure key authentication handling, clean data
+                    mappings, and validation.</p>
                 </div>
               </div>
             </div>
@@ -472,114 +480,93 @@
             </div>
 
 
-            <div class="filters reveal" role="tablist" aria-label="Project categories">
-              <button class="filterBtn isActive" type="button" role="tab" aria-selected="true"
-                data-filter="all">All</button>
-              <button class="filterBtn" type="button" role="tab" aria-selected="false" data-filter="web">Web</button>
-              <button class="filterBtn" type="button" role="tab" aria-selected="false" data-filter="pwa">PWA</button>
-              <button class="filterBtn" type="button" role="tab" aria-selected="false"
-                data-filter="mobile">Mobile</button>
-              <button class="filterBtn" type="button" role="tab" aria-selected="false"
-                data-filter="dashboard">Dashboard</button>
-            </div>
+            <div class="perspective-carousel" id="projectsCarousel" tabindex="0"
+              aria-label="Projects Perspective Carousel">
+              <div class="carousel-track projectsGrid" id="projectsGrid" aria-live="polite">
+                <article class="projectCard reveal tilt" tabindex="0" data-tags="web pwa">
+                  <div class="projectCard__media">
+                    <div class="mediaGlow"></div>
+                    <img loading="lazy" decoding="async" src="assets/inventory.png" alt="Inventory Project preview"
+                      class="projectCard__img" />
+                    <div class="mediaZoom" aria-hidden="true"></div>
+                  </div>
+                  <div class="projectCard__body">
+                    <div class="projectTop">
+                      <h3 class="projectTitle">Inventory Management System</h3>
+                      <span class="badge">PWA</span>
+                    </div>
+                    <p class="projectDesc">Manage your inventory with ease.</p>
+                    <div class="techRow" aria-label="Technologies used">
+                      <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span><span
+                        class="chip">PWA</span>
+                    </div>
+                    <div class="projectLinks">
+                      <a class="btn btn--ghost btn--small" href="#" aria-label="GitHub for Neon Commerce">GitHub</a>
 
-            <div class="projectsGrid" id="projectsGrid" aria-live="polite">
-              <article class="projectCard reveal tilt" tabindex="0" data-tags="web pwa">
-                <div class="projectCard__media">
-                  <div class="mediaGlow"></div>
-                  <img loading="lazy" decoding="async" src="assets/images/project-1.jpg"
-                    alt="Project preview placeholder" class="projectCard__img" />
-                  <div class="mediaZoom" aria-hidden="true"></div>
-                </div>
-                <div class="projectCard__body">
-                  <div class="projectTop">
-                    <h3 class="projectTitle">Neon Commerce</h3>
-                    <span class="badge">PWA</span>
+                    </div>
                   </div>
-                  <p class="projectDesc">Offline shopping flow with install UX and fast navigation.</p>
-                  <div class="techRow" aria-label="Technologies used">
-                    <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span><span
-                      class="chip">PWA</span>
-                  </div>
-                  <div class="projectLinks">
-                    <a class="btn btn--ghost btn--small" href="#" aria-label="GitHub for Neon Commerce">GitHub</a>
-                    <a class="btn btn--secondary btn--small" href="#" aria-label="Live demo for Neon Commerce">Live
-                      Demo</a>
-                  </div>
-                </div>
-              </article>
+                </article>
 
-              <article class="projectCard reveal tilt" tabindex="0" data-tags="web">
-                <div class="projectCard__media">
-                  <div class="mediaGlow"></div>
-                  <img loading="lazy" decoding="async" src="assets/images/project-2.jpg"
-                    alt="Project preview placeholder" class="projectCard__img" />
-                  <div class="mediaZoom" aria-hidden="true"></div>
-                </div>
-                <div class="projectCard__body">
-                  <div class="projectTop">
-                    <h3 class="projectTitle">SaaS Landing</h3>
-                    <span class="badge badge--alt">Web</span>
+                <article class="projectCard reveal tilt" tabindex="0" data-tags="web">
+                  <div class="projectCard__media">
+                    <div class="mediaGlow"></div>
+                    <img loading="lazy" decoding="async" src="assets/school%20mgt.png"
+                      alt="School Management Project preview" class="projectCard__img" />
+                    <div class="mediaZoom" aria-hidden="true"></div>
                   </div>
-                  <p class="projectDesc">High-converting marketing layout with animated sections.</p>
-                  <div class="techRow" aria-label="Technologies used">
-                    <span class="chip">Sora</span><span class="chip">Glass UI</span><span class="chip">A11y</span>
-                  </div>
-                  <div class="projectLinks">
-                    <a class="btn btn--ghost btn--small" href="#" aria-label="GitHub for SaaS Landing">GitHub</a>
-                    <a class="btn btn--secondary btn--small" href="#" aria-label="Live demo for SaaS Landing">Live
-                      Demo</a>
-                  </div>
-                </div>
-              </article>
+                  <div class="projectCard__body">
+                    <div class="projectTop">
+                      <h3 class="projectTitle">School Management System</h3>
+                      <span class="badge badge--alt">Web</span>
+                    </div>
+                    <p class="projectDesc">Manage your school Accounts , Fees , Admissions with ease</p>
+                    <div class="techRow" aria-label="Technologies used">
+                      <span class="chip">Sora</span><span class="chip">Glass UI</span><span class="chip">A11y</span>
+                    </div>
+                    <div class="projectLinks">
+                      <a class="btn btn--ghost btn--small" href="#" aria-label="GitHub for SaaS Landing">GitHub</a>
 
-              <article class="projectCard reveal tilt" tabindex="0" data-tags="mobile">
-                <div class="projectCard__media">
-                  <div class="mediaGlow"></div>
-                  <img loading="lazy" decoding="async" src="assets/images/project-3.jpg"
-                    alt="Project preview placeholder" class="projectCard__img" />
-                  <div class="mediaZoom" aria-hidden="true"></div>
-                </div>
-                <div class="projectCard__body">
-                  <div class="projectTop">
-                    <h3 class="projectTitle">Pulse Fitness</h3>
-                    <span class="badge badge--green">Mobile</span>
+                    </div>
                   </div>
-                  <p class="projectDesc">Mobile-first experience with smooth gesture-friendly interactions.</p>
-                  <div class="techRow" aria-label="Technologies used">
-                    <span class="chip">Responsive</span><span class="chip">Animations</span><span class="chip">UX</span>
-                  </div>
-                  <div class="projectLinks">
-                    <a class="btn btn--ghost btn--small" href="#" aria-label="GitHub for Pulse Fitness">GitHub</a>
-                    <a class="btn btn--secondary btn--small" href="#" aria-label="Live demo for Pulse Fitness">Live
-                      Demo</a>
-                  </div>
-                </div>
-              </article>
+                </article>
 
-              <article class="projectCard reveal tilt" tabindex="0" data-tags="dashboard">
-                <div class="projectCard__media">
-                  <div class="mediaGlow"></div>
-                  <img loading="lazy" decoding="async" src="assets/images/project-4.jpg"
-                    alt="Project preview placeholder" class="projectCard__img" />
-                  <div class="mediaZoom" aria-hidden="true"></div>
-                </div>
-                <div class="projectCard__body">
-                  <div class="projectTop">
-                    <h3 class="projectTitle">Admin Intelligence</h3>
-                    <span class="badge badge--alt">Dashboard</span>
+                <article class="projectCard reveal tilt" tabindex="0" data-tags="mobile">
+                  <div class="projectCard__media">
+                    <div class="mediaGlow"></div>
+                    <img loading="lazy" decoding="async" src="assets/habbit%20tracker.png"
+                      alt="Habit Tracker Project preview" class="projectCard__img" />
+                    <div class="mediaZoom" aria-hidden="true"></div>
                   </div>
-                  <p class="projectDesc">Secure admin panel with clean data tables and validation.</p>
-                  <div class="techRow" aria-label="Technologies used">
-                    <span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">REST</span>
+                  <div class="projectCard__body">
+                    <div class="projectTop">
+                      <h3 class="projectTitle">Habbit Tracker App</h3>
+                      <span class="badge badge--green">Mobile</span>
+                    </div>
+                    <p class="projectDesc">Mobile-first experience with smooth gesture-friendly interactions.</p>
+                    <div class="techRow" aria-label="Technologies used">
+                      <span class="chip">Responsive</span><span class="chip">Animations</span><span
+                        class="chip">UX</span>
+                    </div>
+                    <div class="projectLinks">
+                      <a class="btn btn--ghost btn--small" href="#" aria-label="GitHub for Pulse Fitness">GitHub</a>
+
+                    </div>
                   </div>
-                  <div class="projectLinks">
-                    <a class="btn btn--ghost btn--small" href="#" aria-label="GitHub for Admin Intelligence">GitHub</a>
-                    <a class="btn btn--secondary btn--small" href="#" aria-label="Live demo for Admin Intelligence">Live
-                      Demo</a>
-                  </div>
-                </div>
-              </article>
+                </article>
+
+
+              </div>
+
+              <!-- Controls -->
+              <div class="carousel-controls">
+                <button type="button" class="carousel-control prev" aria-label="Show previous project">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="carousel-dots"></div>
+                <button type="button" class="carousel-control next" aria-label="Show next project">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -596,43 +583,53 @@
               <div class="techIcon reveal floatIcon" data-name="HTML5"
                 style="--brand:#E34F26; --brand-soft: rgba(227,79,38,0.14); --brand-shadow: rgba(227,79,38,0.3); --icon:'logos:html-5';">
                 <span class="logoBox"><iconify-icon class="iconify-icon" icon="logos:html-5"></iconify-icon></span><span
-                  class="nameText">HTML5</span></div>
+                  class="nameText">HTML5</span>
+              </div>
               <div class="techIcon reveal floatIcon" data-name="CSS3"
                 style="--brand:#1572B6; --brand-soft: rgba(21,114,182,0.14); --brand-shadow: rgba(21,114,182,0.3); --icon:'logos:css-3';">
                 <span class="logoBox"><iconify-icon class="iconify-icon" icon="logos:css-3"></iconify-icon></span><span
-                  class="nameText">CSS3</span></div>
+                  class="nameText">CSS3</span>
+              </div>
               <div class="techIcon reveal floatIcon" data-name="JavaScript"
                 style="--brand:#F0C808; --brand-soft: rgba(240,200,8,0.14); --brand-shadow: rgba(240,200,8,0.3); --icon:'logos:javascript';">
                 <span class="logoBox"><iconify-icon class="iconify-icon"
-                    icon="logos:javascript"></iconify-icon></span><span class="nameText">JavaScript</span></div>
+                    icon="logos:javascript"></iconify-icon></span><span class="nameText">JavaScript</span>
+              </div>
               <div class="techIcon reveal floatIcon" data-name="Bootstrap"
                 style="--brand:#9163CB; --brand-soft: rgba(145,99,203,0.14); --brand-shadow: rgba(145,99,203,0.3); --icon:'logos:bootstrap';">
                 <span class="logoBox"><iconify-icon class="iconify-icon"
-                    icon="logos:bootstrap"></iconify-icon></span><span class="nameText">Bootstrap</span></div>
+                    icon="logos:bootstrap"></iconify-icon></span><span class="nameText">Bootstrap</span>
+              </div>
               <div class="techIcon reveal floatIcon" data-name="PHP"
                 style="--brand:#8993D0; --brand-soft: rgba(137,147,208,0.14); --brand-shadow: rgba(137,147,208,0.3); --icon:'logos:php';">
                 <span class="logoBox"><iconify-icon class="iconify-icon" icon="logos:php"></iconify-icon></span><span
-                  class="nameText">PHP</span></div>
+                  class="nameText">PHP</span>
+              </div>
               <div class="techIcon reveal floatIcon" data-name="MySQL"
                 style="--brand:#4C93D6; --brand-soft: rgba(76,147,214,0.14); --brand-shadow: rgba(76,147,214,0.3); --icon:'logos:mysql';">
                 <span class="logoBox"><iconify-icon class="iconify-icon" icon="logos:mysql"></iconify-icon></span><span
-                  class="nameText">MySQL</span></div>
+                  class="nameText">MySQL</span>
+              </div>
               <div class="techIcon reveal floatIcon" data-name="Git"
                 style="--brand:#F1502F; --brand-soft: rgba(241,80,47,0.14); --brand-shadow: rgba(241,80,47,0.3); --icon:'logos:git-icon';">
                 <span class="logoBox"><iconify-icon class="iconify-icon"
-                    icon="logos:git-icon"></iconify-icon></span><span class="nameText">Git</span></div>
+                    icon="logos:git-icon"></iconify-icon></span><span class="nameText">Git</span>
+              </div>
               <div class="techIcon reveal floatIcon" data-name="GitHub"
                 style="--brand:#C9CBCF; --brand-soft: rgba(201,203,207,0.14); --brand-shadow: rgba(201,203,207,0.3); --icon:'logos:github-icon';">
                 <span class="logoBox"><iconify-icon class="iconify-icon"
-                    icon="logos:github-icon"></iconify-icon></span><span class="nameText">GitHub</span></div>
+                    icon="logos:github-icon"></iconify-icon></span><span class="nameText">GitHub</span>
+              </div>
               <div class="techIcon reveal floatIcon" data-name="Android"
                 style="--brand:#3DDC84; --brand-soft: rgba(61,220,132,0.14); --brand-shadow: rgba(61,220,132,0.3); --icon:'logos:android-icon';">
                 <span class="logoBox"><iconify-icon class="iconify-icon"
-                    icon="logos:android-icon"></iconify-icon></span><span class="nameText">Android</span></div>
+                    icon="logos:android-icon"></iconify-icon></span><span class="nameText">Android</span>
+              </div>
               <div class="techIcon reveal floatIcon" data-name="Firebase"
                 style="--brand:#FFA000; --brand-soft: rgba(255,160,0,0.14); --brand-shadow: rgba(255,160,0,0.3); --icon:'logos:firebase';">
                 <span class="logoBox"><iconify-icon class="iconify-icon"
-                    icon="logos:firebase"></iconify-icon></span><span class="nameText">Firebase</span></div>
+                    icon="logos:firebase"></iconify-icon></span><span class="nameText">Firebase</span>
+              </div>
             </div>
           </div>
         </section>
@@ -728,7 +725,7 @@
                     <hr class="divider">
 
                     <div class="info-line"><span class="dot"></span>Email: <a
-                        href="mailto:faizan@example.com">faizan@example.com</a></div>
+                        href="mailto:faizan@example.com">faizanpro32@gmail.com</a></div>
                     <div class="info-line"><span class="dot"></span>Availability: Open for Projects</div>
 
                     <div class="contactForm__status" id="contactStatus" role="status" aria-live="polite"
@@ -748,7 +745,9 @@
         <footer class="footer" aria-label="Footer">
           <div class="container footer__grid">
             <div class="footerBrand">
-              <div class="footerBrand__logo" aria-hidden="true"></div>
+              <div class="footerBrand__logo" aria-hidden="true">
+                <img src="assets/actual_logo.png" alt="Muhammad Faizan Logo" style="width: 100%; height: 100%; object-fit: contain;" />
+              </div>
               <div class="footerBrand__name">Muhammad Faizan</div>
               <div class="footerBrand__sub">Web • PWA • Mobile</div>
             </div>
@@ -1049,6 +1048,20 @@
       el.href = url;
       el.download = 'Faizan-Khan-CV.txt';
     })();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.bentoCard').forEach(card => {
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+        });
+      });
+    });
   </script>
 
 </body>
