@@ -208,7 +208,7 @@
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 4px 0;
+  padding: 2px 0;
   transition: background .25s ease, border-color .25s ease, transform .25s ease;
 }
 
@@ -241,7 +241,7 @@
   gap: 12px;
 }
 
-.brand__mark{width:350px; height:105px; border-radius:8px; background: url('../logo.png') no-repeat left center/contain; position:relative; overflow:hidden;}
+.brand__mark{width:320px; height:95px; border-radius:8px; background: url('../logo.png') no-repeat left center/contain; position:relative; overflow:hidden;}
 .brand__mark:after{display:none;} 
 .brand__name{display:none;}
 
