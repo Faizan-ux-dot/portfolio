@@ -1,0 +1,6 @@
+/* Loader enhancements (visual only). */
+
+.loader__content{will-change: transform, filter;}
+.loader.isExit .loader__content{animation: loaderExit .55s ease both;}
+
+

@@ -1,0 +1,37 @@
+/* Cursor enhancements (purely visual; JS already toggles isHover/isDown). */
+
+.cursor__outer{
+  will-change: transform, border-color, box-shadow;
+}
+
+.cursor__ring{
+  will-change: transform, opacity;
+}
+
+.cursor__inner{
+  will-change: transform, box-shadow;
+}
+
+.cursor.isHover .cursor__outer{
+  transform: translate3d(var(--x,0px), var(--y,0px),0) scale(1.35);
+  border-color: rgba(255,255,255,.92);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 0 28px rgba(0,245,212,.22);
+}
+
+
+.cursor.isHover .cursor__inner{
+  box-shadow: 0 0 30px rgba(0,245,212,.40);
+  transform: translate3d(var(--x,0px), var(--y,0px),0) scale(1.25);
+}
+
+.cursor.isHover .cursor__ring{
+  transform: translate3d(var(--x,0px), var(--y,0px),0) scale(1.12);
+  opacity:1;
+}
+
+.cursor.isDown .cursor__outer{
+  transform: translate3d(var(--x,0px), var(--y,0px),0) scale(.86);
+  opacity:.95;
+}
+
+

@@ -1,0 +1,51 @@
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+}
+
+@keyframes floatSlow{0%{transform:translate3d(0,0,0);}50%{transform:translate3d(0,-14px,0);}100%{transform:translate3d(0,0,0);}}
+@keyframes floatSlow2{0%{transform:translate3d(0,0,0);}50%{transform:translate3d(0,12px,0);}100%{transform:translate3d(0,0,0);}}
+@keyframes glowPulse{0%,100%{filter:brightness(1); opacity:.9;}50%{filter:brightness(1.25); opacity:1;}}
+@keyframes auroraMove{0%{transform:translate3d(-20%,-10%,0) scale(1.1);}50%{transform:translate3d(20%,10%,0) scale(1.12);}100%{transform:translate3d(-20%,-10%,0) scale(1.1);}}
+@keyframes meshRotate{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@keyframes gridDrift{0%{transform:translate3d(0,0,0);}100%{transform:translate3d(0,80px,0);}}
+@keyframes blob1{0%,100%{transform:translate3d(0,0,0) scale(1);}50%{transform:translate3d(40px,-30px,0) scale(1.08);}}
+@keyframes blob2{0%,100%{transform:translate3d(0,0,0) scale(1);}50%{transform:translate3d(-35px,30px,0) scale(1.06);}}
+@keyframes blob3{0%,100%{transform:translate3d(0,0,0) scale(1);}50%{transform:translate3d(15px,45px,0) scale(1.09);}}
+
+@keyframes typingBlink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes roleFade{0%{opacity:0; transform:translate3d(0,6px,0);}100%{opacity:1; transform:translate3d(0,0,0);}}
+
+@keyframes revealUp{0%{opacity:0; transform:translate3d(0,16px,0) scale(.98);}100%{opacity:1; transform:translate3d(0,0,0) scale(1);}}
+@keyframes railSlide{0%{transform:translate3d(0,0,0);}100%{transform:translate3d(-100%,0,0);}}
+
+@keyframes cursorGlow{0%,100%{transform:scale(1); opacity:.55;}50%{transform:scale(1.35); opacity:1;}}
+
+/* Loader */
+@keyframes loaderIn{0%{opacity:1; transform:translate3d(0,8px,0);}100%{opacity:1; transform:translate3d(0,0,0);}}
+@keyframes barFill{0%{width:0%;}100%{width:100%;}}
+@keyframes loaderExit{0%{opacity:1; filter:blur(0);}100%{opacity:0; filter:blur(12px); transform:translate3d(0,-10px,0);}}
+
+/* Cursor trail */
+@keyframes trailPop{0%{transform:scale(.8); opacity:0;}20%{opacity:.95;}100%{transform:scale(1.2); opacity:0;}}
+
+/* Premium animated gradient text */
+@keyframes gradTextMove{
+  0%{background-position: 0% 50%;}
+  50%{background-position: 100% 50%;}
+  100%{background-position: 0% 50%;}
+}
+
+/* Subtle ambient motion helpers */
+@keyframes blobFloat{
+  0%,100%{transform: translate3d(0,0,0) scale(1);}
+  50%{transform: translate3d(0,-18px,0) scale(1.06);}
+}
+
+@keyframes gridFadeDrift{
+  0%{opacity:.16; transform: translate3d(0,0,0)}
+  50%{opacity:.22; transform: translate3d(0,10px,0)}
+  100%{opacity:.16; transform: translate3d(0,0,0)}
+}
+
+
+

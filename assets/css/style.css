@@ -1,0 +1,28 @@
+/* Additional high-level styling */
+
+html{font-synthesis-weight:none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+
+main{position:relative; z-index:1;}
+
+/* Improve tap targets */
+button, a.btn{cursor:pointer;}
+
+/* Ensure hidden elements stay hidden, but don’t break layout unexpectedly */
+[hidden]{display:none;}
+
+/* Critical: reveal/hidden state should not hide everything by default */
+.reveal{opacity:1; transform:none;}
+.isIn{opacity:1; transform:none;}
+
+
+
+/* Ensure nav burger spans animate (handled in JS by toggling hidden state only) */
+
+/* Tilt focus */
+.tilt:focus-visible{outline:2px solid rgba(0,229,255,.9); outline-offset:4px;}
+
+/* Make cards respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .floaty, .blob--1, .blob--2, .blob--3, .floatCard, .floatIcon{animation:none !important;}
+}
+

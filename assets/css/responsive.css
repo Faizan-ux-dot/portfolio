@@ -1,0 +1,26 @@
+@media (max-width: 1020px){
+  .hero__grid{grid-template-columns: 1fr;}
+  .hero__right{min-height: 420px;}
+  .ill{width: 420px; height: 380px; margin: 0 auto; transform:none;}
+  .aboutGrid{grid-template-columns: 1fr;}
+  .serviceGrid{grid-template-columns: 1fr;}
+  .projectsGrid{grid-template-columns: 1fr;}
+  .stackGrid{grid-template-columns: repeat(3,1fr);}
+  .skillsGrid{grid-template-columns: 1fr;}
+  .processGrid{grid-template-columns: repeat(2,1fr);}
+  .contactGrid{grid-template-columns: 1fr;}
+  .footer__grid{grid-template-columns: 1fr 1fr;}
+}
+
+@media (max-width: 720px){
+  .nav__links{display:none;}
+  .nav__burger{display:inline-flex; flex-direction:column; justify-content:center; align-items:center;}
+  .nav__mobile{display:block;}
+  .section{padding: 64px 0;}
+  .sectionHead{flex-direction:column; align-items:flex-start;}
+  .stackGrid{grid-template-columns: repeat(2,1fr);}
+  .processGrid{grid-template-columns: 1fr;}
+  .miniGrid{grid-template-columns: 1fr;}
+  .hero{padding-top: 34px;}
+}
+
