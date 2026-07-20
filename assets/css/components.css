@@ -1558,8 +1558,8 @@
   position: relative;
   overflow: hidden;
 
-  padding: 14px 10px;
-  min-height: 56px;
+  padding: 18px 10px;
+  min-height: 115px;
 
   display: flex;
   flex-direction: column;
@@ -1598,7 +1598,7 @@
   transition: transform .85s cubic-bezier(.2, .8, .2, 1);
 }
 
-/* Icon/logo box: hidden by default (name only visible) */
+/* Icon/logo box: permanently visible */
 .techIcon .logoBox {
   width: 48px;
   height: 48px;
@@ -1610,10 +1610,10 @@
   justify-content: center;
   margin-bottom: 10px;
 
-  opacity: 0;
-  transform: scale(0.35) translateY(10px);
+  opacity: 1;
+  transform: none;
 
-  transition: transform .55s cubic-bezier(.34, 1.56, .64, 1), opacity .35s ease, border-color .35s ease, box-shadow .35s ease;
+  transition: border-color .35s ease, box-shadow .35s ease;
   box-shadow: none;
   border-color: rgba(242, 241, 238, 0.1);
 }
@@ -1629,8 +1629,6 @@
 }
 
 .techIcon:hover .logoBox {
-  opacity: 1;
-  transform: scale(1.1) translateY(-2px);
   border-color: var(--brand);
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 14%, transparent);
 }
@@ -1640,16 +1638,13 @@
 }
 
 .techIcon:hover .nameText {
-  transform: translateY(4px);
   color: #F2F1EE;
-  transition: transform .35s ease, color .35s ease;
+  transition: color .35s ease;
 }
 
 .techIcon:hover {
-  transform: translateY(-7px) scale(1.03);
   border-color: var(--brand);
-  box-shadow: 0 20px 45px -12px color-mix(in srgb, var(--brand) 40%, transparent);
-  transition: transform .45s cubic-bezier(.2, .8, .2, 1), border-color .35s ease;
+  transition: border-color .35s ease;
 }
 
 .floatIcon {
