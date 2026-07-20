@@ -462,38 +462,25 @@
   }
 }
 
-.hero__roles {
-  margin-top: 14px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 900;
-  font-size: 18px;
-  color: rgba(255, 255, 255, .92);
+.hero__tagline {
+  font-family: var(--font-alt);
+  font-size: clamp(16px, 2.5vw, 19px);
+  font-weight: 700;
+  color: #F2F1EE;
+  margin-top: 18px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  letter-spacing: 0.1px;
 }
 
-.roleText {
+.taglineCursor {
   display: inline-block;
-  padding: 10px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 30px rgba(91, 94, 255, .08);
-}
-
-.roleCursor {
-  width: 10px;
-  height: 18px;
-  border-radius: 4px;
-  background: rgba(0, 229, 255, .9);
-  animation: typingBlink 1s steps(2, end) infinite;
-}
-
-.hero__sub {
-  max-width: 560px;
-  color: rgba(255, 255, 255, .82);
-  font-size: 15.5px;
-  line-height: 1.75;
+  width: 2.5px;
+  height: 19px;
+  background-color: #FF8A3D;
+  margin-left: 6px;
+  vertical-align: middle;
+  animation: typingBlink 0.9s steps(2, end) infinite;
 }
 
 .hero__cta {

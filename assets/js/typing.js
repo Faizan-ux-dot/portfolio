@@ -1,28 +1,47 @@
 export function initTyping(){
-  const roles = ['Web Development','Progressive Web Apps','Mobile Applications','Full Stack Solutions','API Integration'];
-  const roleEl = document.querySelector('.hero__roles .roleText');
-  if(!roleEl) return;
+  const roles = [
+    'Full Stack Web Developer',
+    'Progressive Web App Developer',
+    'Prompt Engineer'
+  ];
+  const textEl = document.querySelector('.hero__tagline .taglineText');
+  if(!textEl) return;
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(reduce){
-    roleEl.textContent = roles[0];
+    textEl.textContent = roles[0];
     return;
   }
 
-  let i=0;
-  let last = 0;
-  const interval = 1700;
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 80;
 
-  function step(ts){
-    if(!last) last = ts;
-    if(ts - last >= interval){
-      i = (i + 1) % roles.length;
-      roleEl.textContent = roles[i];
-      last = ts;
+  function type(){
+    const currentWord = roles[wordIndex];
+    
+    if(isDeleting){
+      textEl.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+      typingSpeed = 40;
+    } else {
+      textEl.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+      typingSpeed = 80;
     }
-    requestAnimationFrame(step);
+
+    if(!isDeleting && charIndex === currentWord.length){
+      typingSpeed = 2200;
+      isDeleting = true;
+    } else if(isDeleting && charIndex === 0){
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % roles.length;
+      typingSpeed = 400;
+    }
+
+    setTimeout(type, typingSpeed);
   }
 
-  requestAnimationFrame(step);
+  type();
 }
-
