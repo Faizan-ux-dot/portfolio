@@ -102,7 +102,7 @@
     <div class="loader__bg" aria-hidden="true"></div>
     <div class="loader__content">
       <div class="loader__logo" aria-hidden="true">
-        <span class="logoMark"></span>
+        <img src="assets/actual_logo.png" alt="Muhammad Faizan Logo" style="width: 100%; height: 100%; object-fit: contain;" />
       </div>
       <div class="loader__title">Muhammad Faizan</div>
 
@@ -160,10 +160,6 @@
         </nav>
 
         <div class="nav__actions">
-          <button class="btn btn--ghost nav__iconBtn" type="button" aria-label="Toggle theme" id="themeToggle">
-            <span class="btn__icon" aria-hidden="true">✦</span>
-            <span class="btn__label">Theme</span>
-          </button>
           <a class="btn btn--primary btn--magnetic" href="#contact" aria-label="Hire Me">
             <span class="btn__shine" aria-hidden="true"></span>
             <span class="btn__label">Hire Me</span>
@@ -237,7 +233,7 @@
               <div class="ill" id="ill">
                 <div class="ill__shadow"></div>
                 <div class="ill__portrait">
-                  <img src="WhatsApp%20Image%202026-04-12%20at%2012.13.20%20AM%20(1).jpeg" alt="Muhammad Faizan"
+                  <img src="assets/new%20picture.jpeg" alt="Muhammad Faizan"
                     class="ill__portraitImg" />
                 </div>
                 <div class="ill__phone floaty">
@@ -401,8 +397,67 @@
               <h2 class="sectionTitle reveal">Services</h2>
             </div>
 
+            <div class="bentoGrid" id="servicesBento">
+              <!-- Bento Card 1: Web Development -->
+              <div class="bentoCard bentoCard--2x1 reveal">
+                <div class="bentoCard__glow"></div>
+                <div class="bentoCard__content">
+                  <div class="bentoIcon"><i class="fa-solid fa-code"></i></div>
+                  <h3 class="bentoTitle">Web Development</h3>
+                  <p class="bentoDesc">Interactive frontends, clean architecture, and performance-first builds using modern frameworks and standards. I build responsive and interactive sites designed for high traffic and reliability.</p>
+                </div>
+              </div>
 
-            <div class="cylinder-stage" id="servicesCylinder"></div>
+              <!-- Bento Card 2: Progressive Web Apps -->
+              <div class="bentoCard reveal">
+                <div class="bentoCard__glow"></div>
+                <div class="bentoCard__content">
+                  <div class="bentoIcon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                  <h3 class="bentoTitle">Progressive Web Apps (PWA)</h3>
+                  <p class="bentoDesc">Offline-ready experiences with fast loading, native install support, caching strategies, and reliable loading.</p>
+                </div>
+              </div>
+
+              <!-- Bento Card 3: Mobile Applications -->
+              <div class="bentoCard reveal">
+                <div class="bentoCard__glow"></div>
+                <div class="bentoCard__content">
+                  <div class="bentoIcon"><i class="fa-solid fa-diamond"></i></div>
+                  <h3 class="bentoTitle">Mobile Applications</h3>
+                  <p class="bentoDesc">Mobile-friendly responsive UI patterns, cross-platform layouts, and smooth gesture mechanics.</p>
+                </div>
+              </div>
+
+              <!-- Bento Card 4: Dashboard Systems -->
+              <div class="bentoCard bentoCard--2x1 reveal">
+                <div class="bentoCard__glow"></div>
+                <div class="bentoCard__content">
+                  <div class="bentoIcon"><i class="fa-solid fa-table-cells"></i></div>
+                  <h3 class="bentoTitle">Dashboard & Admin Panels</h3>
+                  <p class="bentoDesc">Custom dashboard interfaces with real-time data flows, role-based access, comprehensive validations, clean databases, and scalable logic structures.</p>
+                </div>
+              </div>
+
+              <!-- Bento Card 5: UI/UX Design -->
+              <div class="bentoCard reveal">
+                <div class="bentoCard__glow"></div>
+                <div class="bentoCard__content">
+                  <div class="bentoIcon"><i class="fa-solid fa-star"></i></div>
+                  <h3 class="bentoTitle">UI/UX Design</h3>
+                  <p class="bentoDesc">Modern, clean user interfaces with clear spacing, premium typography, and refined detail aesthetics.</p>
+                </div>
+              </div>
+
+              <!-- Bento Card 6: REST API Integration -->
+              <div class="bentoCard reveal">
+                <div class="bentoCard__glow"></div>
+                <div class="bentoCard__content">
+                  <div class="bentoIcon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                  <h3 class="bentoTitle">REST API Integration</h3>
+                  <p class="bentoDesc">Robust server API consumption, secure key authentication handling, clean data mappings, and validation.</p>
+                </div>
+              </div>
+            </div>
 
           </div>
         </section>
@@ -979,46 +1034,7 @@
     })();
   </script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
 
-      const services = [
-        { icon: 'fa-solid fa-code', title: 'Web Development', desc: 'Interactive frontends, clean architecture, and performance-first builds.' },
-        { icon: 'fa-solid fa-mobile-screen-button', title: 'Progressive Web Apps (PWA)', desc: 'Offline-ready experiences with fast loading and install UX.' },
-        { icon: 'fa-solid fa-diamond', title: 'Mobile Applications', desc: 'Mobile-friendly UX patterns and app-like web flows.' },
-        { icon: 'fa-solid fa-table-cells', title: 'Dashboard Systems', desc: 'Admin panels with scalable data flows and delightful UI.' },
-        { icon: 'fa-solid fa-list-check', title: 'Admin Panels', desc: 'Secure, clean forms, validation, and role-aware interfaces.' },
-        { icon: 'fa-solid fa-star', title: 'UI/UX Design', desc: 'Premium, minimal layouts with strong visual hierarchy.' },
-        { icon: 'fa-solid fa-arrows-rotate', title: 'REST API Integration', desc: 'Clean API consumption with robust error handling.' },
-        { icon: 'fa-solid fa-fire', title: 'Firebase', desc: 'Realtime updates, auth flows, and scalable backend services.' },
-      ];
-
-      const stage = document.getElementById('servicesCylinder');
-      if (!stage) return;
-
-      const ring = document.createElement('div');
-      ring.className = 'cylinder-ring';
-      stage.appendChild(ring);
-
-      const N = services.length;
-      const cardWidth = window.innerWidth <= 640 ? 160 : 220;
-      const gap = 8;
-      const angleStep = 360 / N;
-      const radius = (cardWidth / 2 + gap) / Math.tan(Math.PI / N);
-
-      services.forEach((s, i) => {
-        const card = document.createElement('div');
-        card.className = 'service-card';
-        card.style.transform = `rotateY(${i * angleStep}deg) translateZ(${radius}px)`;
-        card.innerHTML = `
-          <div class="icon-box"><i class="${s.icon}"></i></div>
-          <h3>${s.title}</h3>
-          <p>${s.desc}</p>
-        `;
-        ring.appendChild(card);
-      });
-    });
-  </script>
 
   <script>
     // Fix CV download placeholder with a generated text file (no external assets needed)

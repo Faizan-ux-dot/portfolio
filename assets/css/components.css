@@ -143,12 +143,9 @@
 }
 
 .loader__logo {
-  width: 88px;
-  height: 88px;
-  margin: 0 auto 14px auto;
-  border-radius: 26px;
-  background: linear-gradient(135deg, rgba(91, 94, 255, .35), rgba(0, 229, 255, .16));
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 190px;
+  height: 56px;
+  margin: 0 auto 18px auto;
   position: relative;
   overflow: hidden;
 }
@@ -204,31 +201,32 @@
 /* Navbar */
 .nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 16px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  width: min(var(--container), calc(100% - 32px));
   z-index: 100;
-  padding: 2px 0;
-  transition: background .25s ease, border-color .25s ease, transform .25s ease;
+  padding: 6px 24px;
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.5);
+  transition: background-color .4s var(--ease-premium), border-color .4s var(--ease-premium), box-shadow .4s var(--ease-premium), top .4s var(--ease-premium), padding .4s var(--ease-premium);
 }
 
 .nav.isScrolled {
-  background: rgba(5, 8, 22, .55);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  top: 12px;
+  padding: 4px 24px;
+  background: rgba(7, 11, 26, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(12px);
-}
-
-
-
-.nav.isScrolled {
-  background: rgba(5, 8, 22, .55);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 90, 31, 0.04);
 }
 
 .nav__inner {
-  width: min(var(--container), calc(100% - 40px));
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -241,7 +239,7 @@
   gap: 12px;
 }
 
-.brand__mark{width:320px; height:95px; border-radius:8px; background: url('../logo.png') no-repeat left center/contain; position:relative; overflow:hidden;}
+.brand__mark{width:220px; height:64px; border-radius:8px; background: url('../logo.png') no-repeat left center/contain; position:relative; overflow:hidden;}
 .brand__mark:after{display:none;} 
 .brand__name{display:none;}
 
@@ -361,25 +359,33 @@
 
 /* Cards */
 .glassCard {
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow2);
-  backdrop-filter: blur(14px);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(18px);
+  position: relative;
+  transition: transform .4s var(--ease-premium), border-color .4s var(--ease-premium), box-shadow .4s var(--ease-premium);
+}
+
+.glassCard:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.5), 0 0 24px rgba(255, 255, 255, 0.02);
 }
 
 .about-bio-card {
-  padding: 32px;
+  padding: 36px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
 }
 
 .cardTitle {
   margin: 0 0 10px 0;
-  font-size: 16px;
-  font-weight: 900;
+  font-size: 17px;
+  font-weight: 950;
+  letter-spacing: -0.2px;
 }
 
 .cardText {
@@ -856,22 +862,28 @@
 .ill__portrait {
   left: 50%;
   top: 50%;
-  width: min(420px, 88vw);
-  height: min(420px, 88vw);
+  width: min(340px, 80vw);
+  height: min(420px, 98vw);
   transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border: 0;
+  border-radius: 24px;
+  border: 4px solid rgba(255, 255, 255, 0.05);
   background: #202022;
-  box-shadow: none;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(255, 138, 61, 0.15), 0 0 80px rgba(123, 97, 255, 0.1);
   overflow: hidden;
   z-index: 3;
+  transition: transform 0.6s var(--ease-premium), box-shadow 0.6s var(--ease-premium);
+}
+
+.ill__portrait:hover {
+  transform: translate(-50%, -52%) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 0 60px rgba(255, 138, 61, 0.25), 0 0 100px rgba(123, 97, 255, 0.15);
 }
 
 .ill__portrait:before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 50%;
+  border-radius: 24px;
   background: #202022;
   z-index: 0;
 }
@@ -882,9 +894,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 42%;
+  object-position: center top;
   filter: contrast(1.03) brightness(.98);
-  transform: scale(1.08);
+  transform: scale(1.15);
 }
 
 .hero__bottom {
@@ -1145,17 +1157,18 @@
 .stat {
   padding: 20px 22px;
   border-radius: 16px;
-  background: #3D3D41;
-  border: 1px solid rgba(242, 241, 238, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   align-items: center;
   gap: 16px;
-  transition: transform .2s ease, border-color .2s ease;
+  transition: transform .4s var(--ease-premium), border-color .4s var(--ease-premium), background-color .4s var(--ease-premium);
 }
 
 .stat:hover {
-  transform: translateY(-3px);
-  border-color: rgba(255, 138, 61, 0.35);
+  transform: translate3d(0, -4px, 0);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 138, 61, 0.45);
 }
 
 .stat__icon {
@@ -1230,116 +1243,99 @@
 }
 
 /* Services */
-.cylinder-stage {
-  width: 100%;
-  min-height: 380px;
+/* Bento Grid Services */
+.bentoGrid {
   display: grid;
-  place-items: center;
-  overflow: hidden;
-  perspective: 1000px;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 18% 82%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 18% 82%, transparent);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 24px;
 }
 
-.cylinder-ring {
+.bentoCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  backdrop-filter: blur(16px);
   position: relative;
-  width: 220px;
-  height: 280px;
-  transform-style: preserve-3d;
-  animation: spin-ring 28s linear infinite;
+  overflow: hidden;
+  transition: transform 0.4s var(--ease-premium), border-color 0.4s var(--ease-premium), box-shadow 0.4s var(--ease-premium);
 }
 
-.cylinder-stage:hover .cylinder-ring {
-  animation-play-state: paused;
+.bentoCard:hover {
+  transform: translate3d(0, -6px, 0);
+  border-color: rgba(255, 138, 61, 0.45);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45), 0 0 30px rgba(255, 138, 61, 0.06);
 }
 
-@keyframes spin-ring {
-  from {
-    transform: rotateY(0turn);
-  }
-
-  to {
-    transform: rotateY(1turn);
-  }
-}
-
-.service-card {
+.bentoCard__glow {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 220px;
-  height: 280px;
-  border-radius: 20px;
-  background: #343437;
-  border: 1px solid rgba(242, 241, 238, 0.1);
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 26px 20px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  inset: 0;
+  background: radial-gradient(circle at 10% 10%, rgba(255, 138, 61, 0.04), transparent 50%);
+  pointer-events: none;
+  opacity: 0.8;
+  transition: opacity 0.4s var(--ease-premium);
 }
 
-.service-card .icon-box {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, rgba(255, 90, 31, 0.2), rgba(255, 138, 61, 0.08));
+.bentoCard:hover .bentoCard__glow {
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 138, 61, 0.12), transparent 55%);
+  opacity: 1;
+}
+
+.bentoCard--2x1 {
+  grid-column: span 2;
+}
+
+.bentoCard__content {
+  position: relative;
+  z-index: 2;
+}
+
+.bentoIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(255, 90, 31, 0.18), rgba(255, 138, 61, 0.08));
   display: flex;
   align-items: center;
   justify-content: center;
   color: #FF8A3D;
   font-size: 22px;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 138, 61, 0.2);
 }
 
-.service-card h3 {
+.bentoTitle {
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-  margin-bottom: 10px;
+  font-weight: 950;
+  font-size: 19px;
   color: #F2F1EE;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.2px;
 }
 
-.service-card p {
-  font-size: 13px;
+.bentoDesc {
+  font-size: 13.5px;
   color: #ABABAF;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .cylinder-ring {
-    animation-duration: 130s;
+@media (max-width: 900px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 640px) {
-  .cylinder-ring {
-    width: 160px;
-    height: 210px;
+@media (max-width: 600px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
   }
-
-  .service-card {
-    width: 160px;
-    height: 210px;
-    padding: 18px 14px;
+  .bentoCard--2x1 {
+    grid-column: span 1;
   }
-
-  .service-card h3 {
-    font-size: 14.5px;
-  }
-
-  .service-card p {
-    font-size: 11.5px;
-  }
-
-  .service-card .icon-box {
-    width: 44px;
-    height: 44px;
-    font-size: 17px;
-    margin-bottom: 12px;
+  .bentoCard {
+    padding: 24px;
   }
 }
 
@@ -1417,32 +1413,34 @@
   flex-wrap: wrap;
   padding: 12px;
   border-radius: var(--radius-xl);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.05);
-  margin-bottom: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  margin-bottom: 24px;
 }
 
 .filterBtn {
-  padding: 12px 16px;
+  padding: 12px 20px;
   border-radius: 999px;
-  border: 1px solid rgba(242, 241, 238, 0.1);
-  background: #343437;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
   color: #ABABAF;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 13px;
-  transition: transform .2s ease, border-color .2s ease, background .2s ease, color .2s ease;
+  transition: transform .4s var(--ease-premium), border-color .4s var(--ease-premium), background .4s var(--ease-premium), color .4s var(--ease-premium), box-shadow .4s var(--ease-premium);
 }
 
 .filterBtn.isActive {
-  background: linear-gradient(90deg, #FF5A1F, #FF8A3D);
+  background: linear-gradient(135deg, #FF5A1F, #FF8A3D);
   color: #fff;
-  border: none;
-  box-shadow: none;
+  border-color: rgba(255, 138, 61, 0.4);
+  box-shadow: 0 8px 24px rgba(255, 90, 31, 0.25);
 }
 
 .filterBtn:hover {
-  transform: translate3d(0, -2px, 0);
-  border-color: rgba(255, 138, 61, 0.4);
+  transform: translate3d(0, -3px, 0);
+  border-color: rgba(255, 138, 61, 0.45);
+  background: rgba(255, 255, 255, 0.06);
   color: #F2F1EE;
 }
 
@@ -1455,18 +1453,18 @@
 .projectCard {
   position: relative;
   border-radius: 20px;
-  border: 1px solid rgba(242, 241, 238, 0.1);
-  background: #343437;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(16px);
   overflow: hidden;
   transform-style: preserve-3d;
-  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  transition: transform .4s var(--ease-premium), border-color .4s var(--ease-premium), box-shadow .4s var(--ease-premium);
 }
 
 .projectCard:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 138, 61, 0.4);
-  box-shadow: none;
-  transition: transform .2s ease, border-color .2s ease;
+  transform: translate3d(0, -6px, 0);
+  border-color: rgba(255, 138, 61, 0.45);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 24px rgba(255, 138, 61, 0.04);
 }
 
 .projectCard__media {
@@ -2054,26 +2052,27 @@
 .glow-card {
   display: grid;
   border-radius: 26px;
-  background: linear-gradient(163deg, #FF5A1F 0%, #FF8A3D 100%);
+  background: linear-gradient(163deg, #4A4A4E 0%, #2B2B2E 100%);
   transition: box-shadow .3s ease;
 }
 
 .glow-card:hover {
-  box-shadow: 0px 0px 30px 1px rgba(255, 90, 31, 0.30);
+  box-shadow: 0px 0px 30px 2px rgba(255, 90, 31, 0.25);
 }
 
 .glow-card .inner {
   grid-column: 1;
   grid-row: 1;
-  background-color: #343437;
+  background-color: rgba(17, 24, 39, 0.45);
+  backdrop-filter: blur(20px);
   border-radius: 26px;
   padding: 44px;
-  transition: transform .2s ease, border-radius .2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: border-color .4s var(--ease-premium), box-shadow .4s var(--ease-premium);
 }
 
 .glow-card:hover .inner {
-  transform: scale(0.985);
-  border-radius: 22px;
+  border-color: #FF8A3D;
 }
 
 .glow-card h2 {

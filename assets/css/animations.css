@@ -47,5 +47,34 @@
   100%{opacity:.16; transform: translate3d(0,0,0)}
 }
 
+/* Stagger delays for sequential scroll reveal grids */
+.bentoGrid > .bentoCard:nth-child(1) { transition-delay: 0s; }
+.bentoGrid > .bentoCard:nth-child(2) { transition-delay: 0.08s; }
+.bentoGrid > .bentoCard:nth-child(3) { transition-delay: 0.16s; }
+.bentoGrid > .bentoCard:nth-child(4) { transition-delay: 0.24s; }
+.bentoGrid > .bentoCard:nth-child(5) { transition-delay: 0.32s; }
+.bentoGrid > .bentoCard:nth-child(6) { transition-delay: 0.40s; }
+
+.statGrid > .stat:nth-child(1) { transition-delay: 0s; }
+.statGrid > .stat:nth-child(2) { transition-delay: 0.1s; }
+.statGrid > .stat:nth-child(3) { transition-delay: 0.2s; }
+.statGrid > .stat:nth-child(4) { transition-delay: 0.3s; }
+
+.projectsGrid > article:nth-child(1) { transition-delay: 0s; }
+.projectsGrid > article:nth-child(2) { transition-delay: 0.1s; }
+.projectsGrid > article:nth-child(3) { transition-delay: 0.2s; }
+.projectsGrid > article:nth-child(4) { transition-delay: 0.3s; }
+
+.stackGrid > div:nth-child(1) { transition-delay: 0s; }
+.stackGrid > div:nth-child(2) { transition-delay: 0.05s; }
+.stackGrid > div:nth-child(3) { transition-delay: 0.1s; }
+.stackGrid > div:nth-child(4) { transition-delay: 0.15s; }
+.stackGrid > div:nth-child(5) { transition-delay: 0.2s; }
+.stackGrid > div:nth-child(6) { transition-delay: 0.25s; }
+.stackGrid > div:nth-child(7) { transition-delay: 0.3s; }
+.stackGrid > div:nth-child(8) { transition-delay: 0.35s; }
+.stackGrid > div:nth-child(9) { transition-delay: 0.4s; }
+.stackGrid > div:nth-child(10) { transition-delay: 0.45s; }
+
 
 

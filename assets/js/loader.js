@@ -8,7 +8,7 @@ export function initLoader(){
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // If JS runs late / resources are missing, keep UI usable.
-  const totalMs = reduce ? 250 : 650;
+  const totalMs = reduce ? 400 : 1800;
 
   const start = performance.now();
 
@@ -32,7 +32,7 @@ export function initLoader(){
   requestAnimationFrame(tick);
   setTimeout(() => {
     if(document.contains(loader)) loader.remove();
-  }, reduce ? 400 : 900);
+  }, reduce ? 600 : 2300);
 }
 
 
