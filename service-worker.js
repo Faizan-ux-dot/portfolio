@@ -3,19 +3,20 @@ const CACHE_VERSION = 'v1';
 const CACHE_NAME = `faizan-portfolio-${CACHE_VERSION}`;
 
 const CORE_ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/robots.txt',
-  '/assets/css/variables.css',
-  '/assets/css/animations.css',
-  '/assets/css/utilities.css',
-  '/assets/css/components.css',
-  '/assets/css/cursor.css',
-  '/assets/css/loader.css',
-  '/assets/css/responsive.css',
-  '/assets/css/style.css',
-  '/assets/js/main.js'
+  './',
+  'index.html',
+  'manifest.json',
+  'robots.txt',
+  'assets/css/variables.css',
+  'assets/css/animations.css',
+  'assets/css/utilities.css',
+  'assets/css/components.css',
+  'assets/css/cursor.css',
+  'assets/css/loader.css',
+  'assets/css/responsive.css',
+  'assets/css/style.css',
+  'assets/css/background-animated.css',
+  'assets/js/main.js'
 ];
 
 self.addEventListener('install', (event)=>{
@@ -53,7 +54,7 @@ self.addEventListener('fetch', (event)=>{
         return res;
       }).catch(()=>{
         // fallback
-        return caches.match('/index.html');
+        return caches.match('index.html');
       });
     })
   );

@@ -22,7 +22,7 @@ export function initPWA(){
 
   window.addEventListener('load', async ()=>{
     try{
-      await navigator.serviceWorker.register('/service-worker.js');
+      await navigator.serviceWorker.register('service-worker.js');
     }catch(_e){}
   });
 
