@@ -4,48 +4,50 @@ export function initNavbar(){
   const mobile = document.getElementById('navMobile');
   if(!nav) return;
 
-  const sections = Array.from(document.querySelectorAll('section[id]'));
+  const sections = Array.from(document.querySelectorAll('section[id], header[id]'));
   const navLinks = Array.from(document.querySelectorAll('.nav__link, .nav__mobileLink'));
 
-  function updateActiveLink(){
-    const headerHeight = nav.offsetHeight || 80;
-    let currentId = 'home';
+  // Use high-performance IntersectionObserver for lag-free scrollspy active states
+  const observerOptions = {
+    root: null,
+    rootMargin: '-30% 0px -50% 0px',
+    threshold: 0
+  };
 
-    sections.forEach(sec => {
-      const rect = sec.getBoundingClientRect();
-      // If the top of the section is above the threshold (headerHeight + 100px)
-      if (rect.top <= headerHeight + 100) {
-        currentId = sec.getAttribute('id');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const currentId = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href === `#${currentId}`) {
+            link.classList.add('isActive');
+          } else {
+            link.classList.remove('isActive');
+          }
+        });
       }
     });
+  }, observerOptions);
 
-    // Check if scrolled to the bottom of the page
-    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50) {
-      currentId = 'contact';
-    }
+  sections.forEach(sec => observer.observe(sec));
 
-    navLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      if(href === `#${currentId}`){
-        link.classList.add('isActive');
-      } else {
-        link.classList.remove('isActive');
-      }
-    });
-  }
-
-  // Initial call
-  updateActiveLink();
-
-  let ticking=false;
+  // Simple scroll toggle for nav styling, optimized using requestAnimationFrame and ticking
+  let ticking = false;
   function onScroll(){
     if(ticking) return;
-    ticking=true;
+    ticking = true;
     requestAnimationFrame(()=>{
       const y = window.scrollY || 0;
       nav.classList.toggle('isScrolled', y > 20);
-      updateActiveLink();
-      ticking=false;
+      
+      // Fallback for contact scroll spy at the very bottom
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50) {
+        navLinks.forEach(link => {
+          link.classList.toggle('isActive', link.getAttribute('href') === '#contact');
+        });
+      }
+      ticking = false;
     });
   }
   window.addEventListener('scroll', onScroll, {passive:true});

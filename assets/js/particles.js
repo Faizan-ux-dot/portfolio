@@ -2,6 +2,12 @@ export function initParticles(){
   const canvas = document.getElementById('particles');
   if(!canvas) return;
 
+  const isMobile = window.innerWidth <= 720;
+  if(isMobile) {
+    canvas.style.display = 'none';
+    return;
+  }
+
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const ctx = canvas.getContext('2d', { alpha: true });
   if(!ctx) return;
